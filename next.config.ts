@@ -1,10 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  sassOptions: {
-    implementation: 'sass-embedded',
-  },
+  // Enable React strict mode
+  reactStrictMode: true,
   output: 'export',
   distDir: 'build',
 };
