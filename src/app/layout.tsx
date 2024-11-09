@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import  "@style/global.scss"
+import './styles/global.scss';
 
 // !Imports
 import { Chivo, Akshar } from 'next/font/google'
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${chivo.variable} ${akshar.variable}`}>
+    <html lang="en" className={`${chivo.variable} ${akshar.variable} ${global}` }>
       <body>
         {children}
       </body>
