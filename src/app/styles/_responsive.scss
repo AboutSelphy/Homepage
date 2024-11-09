@@ -1,0 +1,137 @@
+// responsive.scss
+@use "sass:math";
+// Target sections with any class and apply dynamic padding using calc()
+section[class] {
+    padding-top: calc(10vh + 2rem);  // padding top is 10% of viewport height + 2rem
+    padding-bottom: calc(10vh + 2rem); // padding bottom is 10% of viewport height + 2rem
+  }
+  
+  // Optional: Responsive behavior with further adjustments using media queries (if needed)
+  @media (max-width: 1200px) {
+    section[class] {
+      padding-top: calc(8vh + 1.5rem);
+      padding-bottom: calc(8vh + 1.5rem);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    section[class] {
+      padding-top: calc(6vh + 1rem);
+      padding-bottom: calc(6vh + 1rem);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    section[class] {
+      padding-top: calc(5vh + 1rem);
+      padding-bottom: calc(5vh + 1rem);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    section[class] {
+      padding-top: calc(4vh + 0.5rem);
+      padding-bottom: calc(4vh + 0.5rem);
+    }
+  }
+
+// Variables for breakpoints
+$breakpoint-sm: 576px;   // Small devices (portrait tablets, phones)
+$breakpoint-md: 768px;   // Medium devices (landscape tablets, small laptops)
+$breakpoint-lg: 992px;   // Large devices (desktops, large laptops)
+$breakpoint-xl: 1200px;  // Extra large devices (large desktops)
+$breakpoint-xxl: 1400px; // Extra extra large devices (very large desktops)
+
+// Flexbox Grid System
+// Container setup
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+// Row setup with Flexbox
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+// Columns setup with Flexbox (this will handle the grid columns using calc())
+// .col-[size] classes are used to specify the width on different screen sizes
+// For example: .col-1 for 1/12 width, .col-2 for 2/12 width, etc.
+
+// Calculate width for each column based on the number of columns in the grid
+$col-width: math.div(100%, 12); // Default to a 12-column grid
+
+// Default columns for large screens (desktop-first approach)
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 calc(#{$col-width} * #{$i});
+    max-width: calc(#{$col-width} * #{$i});
+  }
+}
+
+// Media Queries for responsiveness
+
+// Small devices (portrait tablets, phones)
+@media (max-width: $breakpoint-sm) {
+  $col-width-sm: math.div(100%, 12);
+
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      flex: 0 0 calc(#{$col-width-sm} * #{$i});
+      max-width: calc(#{$col-width-sm} * #{$i});
+    }
+  }
+}
+
+// Medium devices (landscape tablets, small laptops)
+@media (max-width: $breakpoint-md) {
+  $col-width-md: math.div(100%, 12);
+
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      flex: 0 0 calc(#{$col-width-md} * #{$i});
+      max-width: calc(#{$col-width-md} * #{$i});
+    }
+  }
+}
+
+// Large devices (desktops, large laptops)
+@media (max-width: $breakpoint-lg) {
+  $col-width-lg: math.div(100%, 12);
+
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      flex: 0 0 calc(#{$col-width-lg} * #{$i});
+      max-width: calc(#{$col-width-lg} * #{$i});
+    }
+  }
+}
+
+// Extra large devices (large desktops)
+@media (max-width: $breakpoint-xl) {
+  $col-width-xl: math.div(100%, 12);
+
+  @for $i from 1 through 12 {
+    .col-xl-#{$i} {
+      flex: 0 0 calc(#{$col-width-xl} * #{$i});
+      max-width: calc(#{$col-width-xl} * #{$i});
+    }
+  }
+}
+
+// Extra extra large devices (very large desktops)
+@media (max-width: $breakpoint-xxl) {
+  $col-width-xxl: math.div(100%, 12);
+
+  @for $i from 1 through 12 {
+    .col-xxl-#{$i} {
+      flex: 0 0 calc(#{$col-width-xxl} * #{$i});
+      max-width: calc(#{$col-width-xxl} * #{$i});
+    }
+  }
+}
