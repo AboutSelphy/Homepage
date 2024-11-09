@@ -27,10 +27,10 @@
       "@/*": [
         "src/app/*"
       ],
-      "style/*": [
+      "@style/*": [
         "src/app/styles/*"
       ],
-      "component/*": [
+      "@component/*": [
         "src/app/components/*"
       ]
     }
@@ -39,8 +39,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
+    "dist/types/**/*.ts",
     "next-env.d.ts",
-    "dist/types/**/*.ts"
+    "build/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

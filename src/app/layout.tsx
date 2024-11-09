@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import  "style/global.scss"
+import  "@style/global.scss"
 
 // !Imports
 import { Chivo, Akshar } from 'next/font/google'
