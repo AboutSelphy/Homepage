@@ -1,5 +1,7 @@
 // responsive.scss
 @use "sass:math";
+
+$max-width: var(--max-width);
 // Target sections with any class and apply dynamic padding using calc()
 section[class] {
     padding-top: calc(10vh + 2rem);  // padding top is 10% of viewport height + 2rem

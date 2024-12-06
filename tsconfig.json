@@ -26,12 +26,6 @@
     "paths": {
       "@/*": [
         "src/app/*"
-      ],
-      "@style/*": [
-        "src/app/styles/*"
-      ],
-      "@component/*": [
-        "src/app/components/*"
       ]
     }
   },

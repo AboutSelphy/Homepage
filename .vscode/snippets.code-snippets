@@ -5,7 +5,7 @@
 		"<section id=\"${1:id}\" className=\"${2}\">",
 		"  <div className=\"container\">",
 		"    <div className=\"row\">",
-		"      <div className=\".col .col-xs-${3|1,2,3,4,5,6,7,8,9,10,11,12|} .col-sm-${4|1,2,3,4,5,6,7,8,9,10,11,12|} .col-md-${5|1,2,3,4,5,6,7,8,9,10,11,12|} .col-lg-${6|1,2,3,4,5,6,7,8,9,10,11,12|} .col-xl-${7|1,2,3,4,5,6,7,8,9,10,11,12|} .col-xxl-${8|1,2,3,4,5,6,7,8,9,10,11,12|}\">",
+		"      <div className=\"col col-xs-${3|1,2,3,4,5,6,7,8,9,10,11,12|} col-sm-${4|1,2,3,4,5,6,7,8,9,10,11,12|} col-md-${5|1,2,3,4,5,6,7,8,9,10,11,12|} col-lg-${6|1,2,3,4,5,6,7,8,9,10,11,12|} col-xl-${7|1,2,3,4,5,6,7,8,9,10,11,12|} col-xxl-${8|1,2,3,4,5,6,7,8,9,10,11,12|}\">",
 		"        <p>${9:INSERT SOMETHING}</p>",
 		"      </div>",
 		"    </div>",
@@ -18,7 +18,7 @@
 	"Responsive col": {
 	  "prefix": "col",
 	  "body": [
-		"<div className=\".col ${3|col-xs-12,col-sm-12,col-md-6,col-lg-4,col-xl-3|}\">",
+		"<div className=\"col ${3|col-xs-12,col-sm-12,col-md-6,col-lg-4,col-xl-3|}\">",
 		"<p>${4:INSERT SOMETHING}</p>",
 		"</div>"
 	  ],
@@ -29,7 +29,7 @@
 	  "prefix": "grid",
 	  "body": [
 		"  <div className=\"row\">",
-		"    <div className=\".col ${3|col-xs-12,col-sm-12,col-md-6,col-lg-4,col-xl-3|}\">",
+		"    <div className=\"col ${3|col-xs-12,col-sm-12,col-md-6,col-lg-4,col-xl-3|}\">",
 		"      <p>${4:INSERT SOMETHING}</p>",
 		"    </div>",
 		"  </div>",
